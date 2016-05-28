@@ -1,12 +1,13 @@
 #!/usr/bin/env python
 
+import os
 import telegram
 from flask import Flask, request
 
 app = Flask(__name__)
 
 global bot
-bot = telegram.Bot(token='TOKEN')
+bot = telegram.Bot(os.environ['TELEGRAM_KEY'])
 
 
 @app.route('/HOOK', methods=['POST'])

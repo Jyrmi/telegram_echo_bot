@@ -1,2 +1,10 @@
-Flask>=0.10.1
-python-telegram-bot>=2.5
+cycler==0.10.0
+future==0.15.2
+futures==3.0.5
+Jinja2==2.8
+MarkupSafe==0.23
+Pillow==3.2.0
+pyparsing==2.0.3
+python-dateutil==2.4.2
+python-telegram-bot==4.1.1
+gunicorn==19.6.0
