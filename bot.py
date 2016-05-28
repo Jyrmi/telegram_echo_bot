@@ -1,13 +1,23 @@
 #!/usr/bin/env python
 
-import os
-import telegram
-from flask import Flask, request
-
+from flask import Flask
 app = Flask(__name__)
 
-global bot
-bot = telegram.Bot(os.environ['TELEGRAM_KEY'])
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=3000)
+
+# import os
+# import telegram
+# from flask import Flask, request
+
+# app = Flask(__name__)
+
+# global bot
+# bot = telegram.Bot(os.environ['TELEGRAM_KEY'])
 
 
 # @app.route('/HOOK', methods=['POST'])
@@ -36,9 +46,9 @@ bot = telegram.Bot(os.environ['TELEGRAM_KEY'])
 #         return "webhook setup failed"
 
 
-@app.route('/')
-def index():
-    return '.'
+# @app.route('/')
+# def index():
+#     return '.'
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=3000)
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=3000)
